@@ -82,10 +82,10 @@
                             <!-- nome account loggato  -->
                             <div class="flex-grow-1">
                                 <div>{{item.name}}</div>
-                                <div class="txt-gray fnt-sm">{{lastmessage(item.messages).message}}</div>
+                                <div class="txt-gray fnt-sm">{{item.lastMessage().message}}</div>
                             </div>
                             <div class="txt-gray align-self-lg-start">
-                                {{hourLastMessage(item.messages)}}
+                                {{item.hourLastMessage()}}
                             </div>
                         </div>
 
