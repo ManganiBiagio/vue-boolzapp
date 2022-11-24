@@ -2,6 +2,7 @@
     --bg-primary:#D9DBD4;
     --bg-secondary:#009688;
     --icons-color-primary:#B1B1B1;
+    --icons-color-dark:#918f8f;
     --bg-web-app:#EAEAEA;
     --notification-color:#8EDAFC;
 }
@@ -39,7 +40,9 @@
 }
 .chat-box{
     flex-grow: 1;
-    background-color: blue;
+    
+    display: flex;
+    flex-direction: column;
 
 }
 .avatar-box{
@@ -49,10 +52,12 @@
     overflow: hidden;
 }
 
-.tab-box .nav-tab{
+.nav-tab{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--bg-web-app);
+    max-height: 50px;
     
 
 }
@@ -64,10 +69,10 @@
 }
 .icons-color{
     color:var(--icons-color-primary);
-    
-
 }
-
+.icons-color-dark{
+    color: var(--icons-color-dark);
+}
 .notification-tab{
     display: flex;
     
@@ -120,12 +125,26 @@
     background-color: white;
     
 }
+.chat{
+    flex-grow: 1;
+    background-image: url(../imgs/mine.jpg);
+}
+.input-chat{
+    display: flex;
+    padding: .5rem;
+    gap: 1rem;
+    background-color: var(--bg-web-app);
+    align-items: center;
 
+}
 
 /* utilities */
 .spacer-tab-box{
     padding: .5rem .5rem;
 }
 .txt-gray{
-    color: lightgray;
+    color: rgb(184, 181, 181);
+}
+.fnt-sm{
+    font-size: .7rem;
 }
