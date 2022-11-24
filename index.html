@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,10 +20,65 @@
     <!-- vue js  -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
+
 <body>
     <!-- div dove carico vue js  -->
     <div id="app">
-        
+        <div class="background">
+            <div class="green-spacer">
+            </div>
+
+            <div class="web-app">
+                <!-- tab-alterale  -->
+                <div class="tab-box">
+                    <div class="nav-tab spacer-tab-box">
+                        <!-- box img+nome  -->
+                        <div class="d-flex align-items-center">
+                            <!-- avatar account loggato  -->
+                            <div class="avatar-box">
+                                <img class="img-fluid" src="imgs/avatar_1.jpg" alt="">
+                            </div>
+
+                            <!-- nome account loggato  -->
+                            <div>
+                                Sofia
+                            </div>
+                        </div>
+                        <!-- box icone -->
+                        <div class="icons-box">
+                            <div><i class="fa-regular fa-circle"></i></div>
+                            <div><i class="fa-solid fa-comment"></i></div>
+                            <div class="me-2"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+
+
+
+                        </div>
+
+                    </div>
+                    <div class="notification-tab spacer-tab-box">
+                        <div class="icon-mute me-2">
+                            <i class="fa-regular fa-bell-slash  fs-3 "></i>
+                        </div>
+                        <div  class="text-notification">
+                            <div >Ricevi notifiche di nuovi messaggi</div>
+                            <a  href="#">Attiva notifiche desktop</a>
+
+                        </div>
+                    </div>
+                    <div class="search-tab"></div>
+                    <div class="anteprima-chat-tab"></div>
+
+                </div>
+                <!-- chat  -->
+                <div class="chat-box">
+
+                </div>
+
+            </div>
+
+
+        </div>
+
 
 
 
@@ -34,10 +90,11 @@
     </div>
 
 
-    
+
 
 
 
     <script type="module" src="js/main.js"></script>
 </body>
+
 </html>
