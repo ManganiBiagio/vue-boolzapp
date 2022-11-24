@@ -59,7 +59,12 @@
 .icons-box{
     display: flex;
     gap: .7rem;
+    
+
+}
+.icons-color{
     color:var(--icons-color-primary);
+    
 
 }
 
@@ -94,11 +99,33 @@
     font-size: .5rem;
     color: var(--icons-color-primary);
 }
-
-
+.search-tab{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin: .2rem .5rem;
+    border-radius: 5px;
+}
+.anteprima-chat-tab{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    
+    overflow: auto;
+}
+.anteprima-chat{
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    background-color: white;
+    
+}
 
 
 /* utilities */
 .spacer-tab-box{
     padding: .5rem .5rem;
+}
+.txt-gray{
+    color: lightgray;
 }
