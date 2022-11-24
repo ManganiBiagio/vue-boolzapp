@@ -5,6 +5,7 @@
     --icons-color-dark:#918f8f;
     --bg-web-app:#EAEAEA;
     --notification-color:#8EDAFC;
+    --color-msg-out:#D5F9BA;
 }
 
 .background{
@@ -128,6 +129,11 @@
 .chat{
     flex-grow: 1;
     background-image: url(../imgs/mine.jpg);
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    overflow: auto;
+    padding: 1rem;
 }
 .input-chat{
     display: flex;
@@ -138,6 +144,25 @@
 
 }
 
+ /* messaggi chat classi */
+ .msg{
+    width: 30%;
+    border-radius: 10px;
+
+    padding: .2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+   
+    
+ }
+ .msg-in{
+    background-color:white ;
+ }
+ .msg-out{
+    background-color:var(--color-msg-out) ;
+    align-self: flex-end;
+ }
+
 /* utilities */
 .spacer-tab-box{
     padding: .5rem .5rem;
@@ -147,4 +172,7 @@
 }
 .fnt-sm{
     font-size: .7rem;
+}
+.fnt-xs{
+    font-size: .5rem;
 }
