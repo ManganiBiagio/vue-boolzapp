@@ -29,11 +29,11 @@
     height: 90vh;
     z-index: 1;
     display: flex;
-    width: 80%;
+    
 }
 .tab-box{
     background-color: var(--bg-web-app);
-    width: 30%;
+    
     display: flex;
     flex-direction: column;
     
@@ -146,17 +146,20 @@
 
  /* messaggi chat classi */
  .msg{
-    width: 30%;
+    min-width: 20%;
+    max-width: 60%;
     border-radius: 10px;
 
     padding: .2rem 1rem;
     display: flex;
     justify-content: space-between;
+    gap: .2rem;
    
     
  }
  .msg-in{
     background-color:white ;
+    align-self: flex-start;
  }
  .msg-out{
     background-color:var(--color-msg-out) ;

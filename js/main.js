@@ -16,9 +16,14 @@ createApp({
   data () {    
     return {
         chatList:chatList,
+        utenteAttivo:null
     };
   },
   methods:{
+  },
+  beforeMount(){
+    this.utenteAttivo=chatList[0];
+
   }
 }).mount("#app")
 

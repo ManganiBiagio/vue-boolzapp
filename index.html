@@ -28,7 +28,7 @@
             <div class="green-spacer">
             </div>
 
-            <div class="web-app">
+            <div class="web-app container">
                 <!-- tab-alterale  -->
                 <div class="tab-box">
                     <div class="nav-tab spacer-tab-box">
@@ -73,14 +73,14 @@
                     </div>
                     <div class="anteprima-chat-tab">
                         <!-- box img+nome  -->
-                        <div class="anteprima-chat gap-2" v-for="chat in chatList">
+                        <div class="anteprima-chat gap-2" v-for="(chat,i) in chatList" :key="i+chat.name" @click="utenteAttivo=chat">
                             <!-- avatar account loggato  -->
-                            <div class="avatar-box">
+                            <div class="avatar-box flex-shrink-0">
                                 <img class="img-fluid" :src="'imgs/avatar'+chat.avatar+'.jpg'" alt="">
                             </div>
 
                             <!-- nome account loggato  -->
-                            <div class="flex-grow-1">
+                            <div class="flex-grow-1 ">
                                 <div>{{chat.name}}</div>
                                 <div class="txt-gray fnt-sm">{{chat.lastMessage().message}}</div>
                             </div>
@@ -99,15 +99,15 @@
                     <div class="nav-tab spacer-tab-box">
                         <!-- box img+nome  -->
                         <div class="d-flex align-items-center">
-                            <!-- avatar account loggato  -->
+                            <!-- avatar account selezionato  -->
                             <div class="avatar-box me-2">
-                                <img class="img-fluid" src="imgs/avatar_1.jpg" alt="">
+                                <img class="img-fluid" :src="`imgs/avatar${utenteAttivo.avatar}.jpg`" alt="">
                             </div>
 
-                            <!-- nome account loggato  -->
+                            <!-- nome account selezionato  -->
                             <div class="flex-grow-1">
-                                <div>Sofia</div>
-                                <div class="txt-gray fnt-sm">ultimo accesso oggi 12:00</div>
+                                <div>{{utenteAttivo.name}}</div>
+                                <div class="txt-gray fnt-sm">ultimo messaggio oggi alle {{utenteAttivo.lastMessage().getHours()}}</div>
                             </div>
                         </div>
                         <!-- box icone -->
@@ -122,21 +122,13 @@
 
                     </div>
                     <div class="chat">
-                        <div class="msg msg-in">
-                            <div>messaggio</div>
-                            <div class="fnt-xs align-self-end">12.31</div>
+                        <div class="msg " :class="msg.status==='sent' ? 'msg-out':'msg-in'" v-for="(msg,i) in utenteAttivo.messages">
+                            <div>{{msg.message}}</div>
+                            <div class="fnt-xs align-self-end">{{msg.getHours()}}</div>
 
                         </div>
-                        <div class="msg msg-out">
-                            <div>messaggio</div>
-                            <div class="fnt-xs align-self-end">12.31</div>
-
-                        </div>
-                        <div class="msg msg-out">
-                            <div>messaggio</div>
-                            <div class="fnt-xs align-self-end">12.31</div>
-
-                        </div>
+                        
+                        
                         
 
                     </div>
