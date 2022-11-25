@@ -15,22 +15,7 @@ import Message  from "./messageClass.js";
     lastMessage(){
         return this.messages[this.messages.length-1]
     }
-    hourLastMessage(){
-        let date=this.lastMessage().date;
-        // return date.splice(11,4)
-        date=date.split("");
-        const filterdate=date.filter((item,i)=>{
-          if(i<11 ||i>15){
-            return false
-          }else{
-            return true
-          }
-        
-  
-        })
-        return filterdate.join("")
-  
-      }
+   
     }
 
 

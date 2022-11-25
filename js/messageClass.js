@@ -4,4 +4,20 @@
         this.message=message;
         this.status=status;
     }
+    getHours(){
+       
+        // return date.splice(11,4)
+
+        const date=this.date.split("");
+        const filterdate=date.filter((item,i)=>{
+          if(i<11 ||i>15){
+            return false
+          }else{
+            return true
+          }
+        
+  
+        })
+        return filterdate.join("")
+    }
 }

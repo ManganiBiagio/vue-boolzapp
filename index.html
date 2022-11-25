@@ -73,19 +73,19 @@
                     </div>
                     <div class="anteprima-chat-tab">
                         <!-- box img+nome  -->
-                        <div class="anteprima-chat gap-2" v-for="item in chatList">
+                        <div class="anteprima-chat gap-2" v-for="chat in chatList">
                             <!-- avatar account loggato  -->
                             <div class="avatar-box">
-                                <img class="img-fluid" :src="'imgs/avatar'+item.avatar+'.jpg'" alt="">
+                                <img class="img-fluid" :src="'imgs/avatar'+chat.avatar+'.jpg'" alt="">
                             </div>
 
                             <!-- nome account loggato  -->
                             <div class="flex-grow-1">
-                                <div>{{item.name}}</div>
-                                <div class="txt-gray fnt-sm">{{item.lastMessage().message}}</div>
+                                <div>{{chat.name}}</div>
+                                <div class="txt-gray fnt-sm">{{chat.lastMessage().message}}</div>
                             </div>
                             <div class="txt-gray align-self-lg-start">
-                                {{item.hourLastMessage()}}
+                                {{chat.lastMessage().getHours()}}
                             </div>
                         </div>
 
