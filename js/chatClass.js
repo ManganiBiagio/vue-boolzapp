@@ -15,6 +15,12 @@ import Message  from "./messageClass.js";
     lastMessage(){
         return this.messages[this.messages.length-1]
     }
+    autoResponder(){
+      const newMsg=new Message(null,null,'received');
+      newMsg.dateConstruction(new Date());
+      newMsg.message="ok";
+      this.messages.push(newMsg);
+    }
    
     }
 

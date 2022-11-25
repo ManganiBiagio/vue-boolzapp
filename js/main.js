@@ -26,8 +26,14 @@ createApp({
     sendNewMsg(){
       
       this.newMsg.dateConstruction(new Date());
+      
       this.utenteAttivo.messages.push(this.newMsg);
-      this.newMsg=new Message(null,null,"sent")
+      setTimeout(()=>{
+        this.utenteAttivo.autoResponder();
+
+      },1000)
+      this.newMsg=new Message(null,null,"sent");
+      
       
       
     }
