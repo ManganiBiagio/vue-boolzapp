@@ -134,7 +134,7 @@
                     </div>
                     <div class="input-chat ">
                         <div class="icons-color-dark "><i class="fa-regular fa-face-smile"></i></div>
-                        <input class="flex-grow-1 form-control" type="text" placeholder="Scrivi un nuovo messaggio...">
+                        <input class="flex-grow-1 form-control" type="text" placeholder="Scrivi un nuovo messaggio..." v-model="newMsg.message" @keyup.Enter="sendNewMsg()">
                         <div class="icons-color-dark "><i class="fa-solid fa-microphone"></i></div>
                     </div>
                     

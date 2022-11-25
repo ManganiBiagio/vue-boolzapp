@@ -4,6 +4,7 @@
         this.message=message;
         this.status=status;
     }
+
     getHours(){
         const date=this.date.split("");
         const filterdate=date.filter((item,i)=>{
@@ -17,4 +18,14 @@
         })
         return filterdate.join("")
     }
+    dateConstruction(now){
+        const dateText=`${now.toLocaleDateString("it") } ${now.toLocaleTimeString("it")}`;
+        this.date=dateText;
+        
+        
+
+    }
+    
+    
+   
 }
