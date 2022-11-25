@@ -19,7 +19,9 @@ createApp({
     return {
         listChat:listChat,
         utenteAttivo:null,
-        newMsg:new Message(null,null,"sent")
+        newMsg:new Message(null,null,"sent"),
+        nameSearchedChat:"",
+        filteredList:listChat,
     };
   },
   methods:{
@@ -33,8 +35,20 @@ createApp({
 
       },1000)
       this.newMsg=new Message(null,null,"sent");
+    },
+    filterList(){
       
       
+      const filterList=this.listChat.filter((chat=>{
+        
+        if(chat.name.startsWith(this.nameSearchedChat)){
+          return true
+        }
+        else{
+          return false
+        }
+      }))
+      this.filteredList=filterList;
       
     }
   },
@@ -44,3 +58,4 @@ createApp({
   }
 }).mount("#app")
 
+"".startsWith

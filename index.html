@@ -68,12 +68,15 @@
                     <div class="search-tab spacer-tab-box icons-color">
                         
                             <i class="fa-solid fa-magnifying-glass me-2"></i>
-                            <input class="flex-grow-1 form-control " type="text" placeholder="cerca o inizia una nuova chat">
+                            <input  v-model="nameSearchedChat" class="flex-grow-1 form-control " type="text" placeholder="cerca o inizia una nuova chat" list="chatname" @keyup="filterList()">
+                            <datalist id="chatname">
+                                <option v-for="chat in listChat" :value="chat.name"></option>
+                            </datalist>
                         
                     </div>
                     <div class="anteprima-chat-tab">
                         <!-- box img+nome  -->
-                        <div class="anteprima-chat gap-2" :class="{'active':utenteAttivo===chat}" v-for="(chat,i) in listChat" :key="i+chat.name" @click="utenteAttivo=chat">
+                        <div class="anteprima-chat gap-2" :class="{'active':utenteAttivo===chat}" v-for="(chat,i) in filteredList" :key="i+chat.name" @click="utenteAttivo=chat">
                             <!-- avatar account loggato  -->
                             <div class="avatar-box flex-shrink-0">
                                 <img class="img-fluid" :src="'imgs/avatar'+chat.avatar+'.jpg'" alt="">
