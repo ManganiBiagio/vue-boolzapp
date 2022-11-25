@@ -1,8 +1,9 @@
-import chatList from "./chatClass.js"
+import {listChat ,Chat} from "./chatClass.js"
+import messageClass from "./messageClass.js"
 
 
-console.log(chatList);
-console.log(chatList[0].lastMessage())
+
+
 
 
 
@@ -15,14 +16,14 @@ createApp({
  
   data () {    
     return {
-        chatList:chatList,
+        listChat:listChat,
         utenteAttivo:null
     };
   },
   methods:{
   },
   beforeMount(){
-    this.utenteAttivo=chatList[0];
+    this.utenteAttivo=listChat[0];
 
   }
 }).mount("#app")

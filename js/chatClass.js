@@ -1,7 +1,7 @@
 import userList from "./userList.js";
 import Message  from "./messageClass.js";
 
- class Chat{
+  class Chat{
     constructor(name,avatar,visible,messages){
         this.name=name;
         this.avatar=avatar;
@@ -19,7 +19,7 @@ import Message  from "./messageClass.js";
     }
 
 
-const Listchat=[];
+const listChat=[];
 userList.forEach((item)=>{
     //creo delle istanza Di Message all'interno dell'array item.message
     const messagesList=[];
@@ -29,7 +29,7 @@ userList.forEach((item)=>{
     })
     // Creo un istanza di chat per ogni elemento della lista 
     const chat=new Chat(item.name,item.avatar,item.visible,messagesList);
-    Listchat.push(chat);
+    listChat.push(chat);
 })
 
-export default Listchat;
+export  {listChat,Chat};

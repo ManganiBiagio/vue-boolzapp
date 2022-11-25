@@ -73,7 +73,7 @@
                     </div>
                     <div class="anteprima-chat-tab">
                         <!-- box img+nome  -->
-                        <div class="anteprima-chat gap-2" v-for="(chat,i) in chatList" :key="i+chat.name" @click="utenteAttivo=chat">
+                        <div class="anteprima-chat gap-2" :class="{'active':utenteAttivo===chat}" v-for="(chat,i) in listChat" :key="i+chat.name" @click="utenteAttivo=chat">
                             <!-- avatar account loggato  -->
                             <div class="avatar-box flex-shrink-0">
                                 <img class="img-fluid" :src="'imgs/avatar'+chat.avatar+'.jpg'" alt="">
@@ -82,9 +82,9 @@
                             <!-- nome account loggato  -->
                             <div class="flex-grow-1 ">
                                 <div>{{chat.name}}</div>
-                                <div class="txt-gray fnt-sm">{{chat.lastMessage().message}}</div>
+                                <div class=" fnt-sm">{{chat.lastMessage().message}}</div>
                             </div>
-                            <div class="txt-gray align-self-lg-start">
+                            <div class="align-self-lg-start">
                                 {{chat.lastMessage().getHours()}}
                             </div>
                         </div>
@@ -134,7 +134,7 @@
                     </div>
                     <div class="input-chat ">
                         <div class="icons-color-dark "><i class="fa-regular fa-face-smile"></i></div>
-                        <input class="flex-grow-1 form-control" type="text">
+                        <input class="flex-grow-1 form-control" type="text" placeholder="Scrivi un nuovo messaggio...">
                         <div class="icons-color-dark "><i class="fa-solid fa-microphone"></i></div>
                     </div>
                     

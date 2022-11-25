@@ -126,6 +126,14 @@
     background-color: white;
     
 }
+.anteprima-chat:hover{
+    background-color: rgb(228, 227, 227);
+    transition: all .1s;
+}
+.anteprima-chat.active{
+    background-color: rgb(189, 189, 189);
+
+}
 .chat{
     flex-grow: 1;
     background-image: url(../imgs/mine.jpg);
