@@ -22,6 +22,7 @@ createApp({
         newMsg:new Message(null,null,"sent"),
         nameSearchedChat:"",
         filteredList:listChat,
+        visibilityInfo:false,
     };
   },
   methods:{
@@ -47,6 +48,13 @@ createApp({
       }))
       this.filteredList=filterList; 
     },
+    onMessageInfoDrop(){
+      this.visibilityInfo=true;
+      setTimeout(()=>{
+        this.visibilityInfo=false;
+      },2000)
+    }
+    
     
   },
   beforeMount(){

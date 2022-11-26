@@ -25,6 +25,9 @@
         
 
     }
+    toString(){
+      return `${this.status } data:${this.date}`
+    }
     
     
    

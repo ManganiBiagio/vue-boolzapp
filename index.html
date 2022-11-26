@@ -133,7 +133,13 @@
                             <div class="dropdown">
                                 <span><i class="fa-solid fa-caret-down"></i></span>
                                 <div class="dropdown-content">
-                                  <div class="dropdown-btn">Message Info</div>
+                                  <div class="dropdown-btn " @click="onMessageInfoDrop()">
+                                    <div> Message Info</div>
+                                    <div v-if="this.visibilityInfo===true" class="dropdown-content">
+                                        {{msg.toString()}}
+                                    </div>
+
+                                  </div>
                                   <div class="dropdown-btn" @click="utenteAttivo.deleteMessage(i)">Delete</div>
                                 </div>
                                 
