@@ -21,8 +21,13 @@ import Message  from "./messageClass.js";
       newMsg.message="ok";
       this.messages.push(newMsg);
     }
-   
-    }
+   deleteMessage(iSelectedMessage){
+    this.messages.splice(iSelectedMessage,1);
+
+    
+    
+   }
+}
 
 
 const listChat=[];

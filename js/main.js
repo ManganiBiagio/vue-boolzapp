@@ -37,10 +37,7 @@ createApp({
       this.newMsg=new Message(null,null,"sent");
     },
     filterList(){
-      
-      
       const filterList=this.listChat.filter((chat=>{
-        
         if(chat.name.startsWith(this.nameSearchedChat)){
           return true
         }
@@ -48,9 +45,9 @@ createApp({
           return false
         }
       }))
-      this.filteredList=filterList;
-      
-    }
+      this.filteredList=filterList; 
+    },
+    
   },
   beforeMount(){
     this.utenteAttivo=listChat[0];
