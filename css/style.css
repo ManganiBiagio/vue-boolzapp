@@ -177,6 +177,7 @@
  .dropdown {
     position: relative;
     display: inline-block;
+      
   }
   
   .dropdown-content {
@@ -187,10 +188,23 @@
     min-width: 130px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    
+    
   }
   
   .dropdown:hover .dropdown-content {
     display: block;
+  }
+.msg-in .dropdown-content .dropdown-content{
+    right: -100%;
+    text-align: center;
+    padding: 2px;
+  }
+.msg-out .dropdown-content .dropdown-content{
+    left: -100%;
+    text-align: center;
+    padding: 2px;
+    
   }
   .dropdown-btn{
     padding: 10px 10px;
