@@ -61,7 +61,8 @@ createApp({
   },
   mounted(){
     window.addEventListener("click",(e)=> {
-      if((e.target.classList.value==="msg-info" )){
+      if(e.target.closest(".msg-info")!==null){
+        if((e.target.closest(".msg-info").classList.value==="msg-info" )){
        
           if(this.visibilityInfo===false){
             this.visibilityInfo=true;
@@ -72,7 +73,11 @@ createApp({
         
        
       }
-      else if(e.target.classList.value!=="msg-info"){
+     
+      
+
+      }
+      else if(e.target!=="msg-info"){
         this.visibilityInfo=false;
       }
       
