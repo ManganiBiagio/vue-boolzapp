@@ -48,18 +48,37 @@ createApp({
       }))
       this.filteredList=filterList; 
     },
-    onMessageInfoDrop(){
-      this.visibilityInfo=true;
-      setTimeout(()=>{
-        this.visibilityInfo=false;
-      },2000)
-    }
+    // onMessageInfoDrop(){
+    //   this.visibilityInfo=true;
+     
+    // }
     
     
   },
   beforeMount(){
     this.utenteAttivo=listChat[0];
 
+  },
+  mounted(){
+    window.addEventListener("click",(e)=> {
+      if((e.target.classList.value==="msg-info" )){
+       
+          if(this.visibilityInfo===false){
+            this.visibilityInfo=true;
+          }
+          else {
+            this.visibilityInfo=false;
+          }
+        
+       
+      }
+      else if(e.target.classList.value!=="msg-info"){
+        this.visibilityInfo=false;
+      }
+      
+      
+
+    })
   }
 }).mount("#app")
 
