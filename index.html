@@ -68,7 +68,7 @@
                     <div class="search-tab spacer-tab-box icons-color">
                         
                             <i class="fa-solid fa-magnifying-glass me-2"></i>
-                            <input  v-model="nameSearchedChat" class="flex-grow-1 form-control " type="text" placeholder="cerca o inizia una nuova chat" list="chatname" @keyup="filterList()">
+                            <input  v-model="nameSearchedChat" class="flex-grow-1 form-control " type="text" placeholder="cerca o inizia una nuova chat" list="chatname" @input="filterList()">
                             <datalist id="chatname">
                                 <option v-for="chat in listChat" :value="chat.name"></option>
                             </datalist>
