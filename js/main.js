@@ -39,7 +39,7 @@ createApp({
     },
     filterList(){
       const filterList=this.listChat.filter((chat=>{
-        if(chat.name.startsWith(this.nameSearchedChat)){
+        if(chat.name.toLowerCase().includes(this.nameSearchedChat)){
           return true
         }
         else{
