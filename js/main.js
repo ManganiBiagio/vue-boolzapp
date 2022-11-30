@@ -27,12 +27,12 @@ createApp({
   },
   methods:{
     sendNewMsg(){
-      
+      const usersActive=this.utenteAttivo;
       this.newMsg.dateConstruction(new Date());
       
-      this.utenteAttivo.messages.push(this.newMsg);
+      usersActive.messages.push(this.newMsg);
       setTimeout(()=>{
-        this.utenteAttivo.autoResponder();
+        usersActive.autoResponder();
 
       },1000)
       this.newMsg=new Message(null,null,"sent");
